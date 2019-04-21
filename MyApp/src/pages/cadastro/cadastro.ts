@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+
+
 
 /**
  * Generated class for the CadastroPage page.
@@ -14,12 +16,32 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'cadastro.html',
 })
 export class CadastroPage {
+ 
+ 
+  
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+    
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CadastroPage');
+  
   }
+   
+ 
+  // irParaDestino(livro:Livro):void{
+  //   this.navCtrl.push(ListarLivrosPage, {livroSelecionado: livro});
+  //   }
+    showConfirmacaoAdicionado() {
+      const alert = this.alertCtrl.create({
+        title: 'Adicionado',
+        subTitle: 'Livro adicionado com sucesso!',
+        buttons: ['OK']
+      });
+      alert.present();
+    }
+
+    ionViewDidLoad() {
+      console.log('ionViewDidLoad CadastroPage');
+    
+    } 
 
 }

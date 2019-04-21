@@ -49,5 +49,15 @@
             <ion-input type="text" name="paginas"></ion-input>
           </ion-item>
         </ion-list>
-        <button ion-button type="submit" block>Cadastrar Livro</button>
+
+        <ion-list >
+          <ion-item *ngFor="let livro of livros">
+          <h2>{{livro.nome}}</h2>
+          <p>{{livro.autor}}</p>
+          </ion-item>
+         </ion-list>
+         <button ion-button (click)="showConfirmacaoAdicionado()" type="submit" >Adicionar</button>
+         <!-- <ion-item *ngFor = "let livro of livros"
+                    (click)="irParaDestino(livro)"> -->
+        <!-- <button ion-button type="submit" block>Cadastrar Livro</button> -->
     </ion-content>
