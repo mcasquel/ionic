@@ -12,6 +12,7 @@ import { FeedPageModule } from '../pages/feed/feed.module';
 import { IntroPageModule } from '../pages/intro/intro.module';
 import { CadastroPageModule } from '../pages/cadastro/cadastro.module';
 import { ListarLivrosPageModule } from '../pages/listar-livros/listar-livros.module';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ListarLivrosPageModule } from '../pages/listar-livros/listar-livros.mod
     FeedPageModule,
     IntroPageModule,
     CadastroPageModule,
-    ListarLivrosPageModule
+    ListarLivrosPageModule,
+    HttpModule 
   ],
   bootstrap: [IonicApp],
   entryComponents: [
